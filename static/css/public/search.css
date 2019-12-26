@@ -1,0 +1,57 @@
+.logo {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: -26px
+}
+
+.search-div {
+    margin: 0px auto;
+    max-width: 1024px;
+    position: relative;
+}
+
+.input-div {
+    background-color: #c40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+
+.input-div input {
+    width: 275px;
+    height: 36px;
+    margin: 1px;
+    outline: none;
+}
+
+.input-div button {
+    width: 100px;
+    height: 36px;
+    background-color: #c40000;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.search-below {
+    margin-top: 3px;
+    margin-left: -20px;
+}
+
+.search-below a {
+    margin: 0px 20px;
+    color: #999999;
+}
+
+.search-below span {
+    color: #999999;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c40000;
+}
+
