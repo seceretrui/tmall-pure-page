@@ -1,0 +1,63 @@
+.categoryWithCarousel {
+    width: 100%;
+    position: relative;
+}
+
+.categoryMenu {
+    width: 200px;
+    background-color: #e2e2e3;
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.eachCategory {
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.eachCategory a {
+    margin-left: 10px;
+    color: #000000;
+}
+
+.eachCategory a:hover {
+    text-decoration: none;
+    color: rgb(135,206,250);
+}
+
+.eachCategory:hover {
+    background-color: white;
+}
+
+.productAsideCategory {
+    width: 825px;
+    height: 510px;
+    background-color: white;
+    margin-left: 220px;
+    position: absolute;
+    z-index: 1;
+}
+
+.productAsideCategory .row {
+    margin: 20px 80px;
+}
+
+.dividingLine {
+    margin-top: 20px;
+    border-bottom: dashed 1px #e7e7e7;
+}
+
+.productAsideCategory a {
+    color :#999999;
+    font-size: 14px;
+    margin: 8px;
+}
+
+.productAsideCategory a:hover {
+    color: #c40000;
+    text-decoration: none;
+}
