@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="../static/css/home/carousel.css">
 </head>
 <body>
+<script>
+    $(function () {
+        $(".right-menu span").mouseenter(function () {
+            var left = $(this).position().left;
+            var top = $(this).position().top;
+            var width = $(this).css("width");
+            var destLeft = parseInt(left) + parseInt(width) / 2;
+            $("img.catEar").css("left", destLeft);
+            $("img.catEar").css("top", top - 20);
+            $("img.catEar").fadeIn(500);
+        });
+        $(".right-menu span").mouseleave(function () {
+            $("img.catEar").hide();
+        })
+    });
+</script>
+    <div style="height:50px"></div>
+    <img src="../static/images/site/catear.png" class="catEar" id="catEar">
     <div class="head-bar">
         <span class="head">
             <span class="glyphicon glyphicon-th-list" style="margin-left: 10px;"></span>

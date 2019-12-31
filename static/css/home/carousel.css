@@ -27,6 +27,12 @@
     height: 30px;
 }
 
+.catEar {
+    position: absolute;
+    height: 15px;
+    display: none;
+}
+
 .carousel-product {
     width: 1024px;
     height: 510px;
