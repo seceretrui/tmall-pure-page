@@ -1,0 +1,84 @@
+.categoryProducts {
+    width: 1013px;
+    margin: 20px auto;
+    padding: 0px 20px 40px ;
+}
+
+.product {
+    width: 225px;
+    height: 338px;
+    border: 3px solid #fff;
+    background-color: white;
+    margin: 12px 5px;
+    float: left;
+    padding: 0px;
+}
+.productUnit {
+    border: 1px solid #eee;
+}
+
+.productPrice {
+    font-size: 20px;
+    color: #CC0000;
+    display: block;
+    padding-left: 4px;
+}
+
+.productLink {
+    margin: 10px 0px;
+    color: #333333;
+    display: block;
+    height: 34px;
+}
+
+.productLink:hover {
+    color: #c40000;
+}
+
+.tmalllLink {
+    margin: 10px 0px;
+    color: #999999;
+    display: block;
+    text-decoration: underline;
+}
+
+.tmalllLink:hover {
+    color: #c40000;
+}
+
+.productInfo {
+    border: 1px solid #eeeeee;
+    color: #999999;
+}
+
+.monthDeal {
+    width: 90px;
+    height: 30px;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.productDealNumber {
+    font-weight: bold;
+    color: #B57C5B;
+}
+
+.productReview {
+    width: 90px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    display: inline-block;
+}
+
+.ProductReviewNumber {
+    font-weight: bold;
+    color: #338888;
+}
+
+.wangwang {
+    padding-left: 3px;
+}

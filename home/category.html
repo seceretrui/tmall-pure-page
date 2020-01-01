@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="../static/css/home/category.css">
 </head>
 <body>
+<script>
+    $(function () {
+        $(".eachCategory").mouseenter(function () {
+            $(".productAsideCategory").show();
+        });
+        $(".eachCategory").mouseleave(function () {
+            $(".productAsideCategory").hide();
+        });
+    });
+</script>
     <div class="categoryWithCarousel">
         <div style="position: relative">
             <div class="categoryMenu ">
@@ -118,7 +128,7 @@
         </div>
 
         <div style="position: relative; left: 0;top: 0;">
-            <div class="productAsideCategory">
+            <div class="productAsideCategory" style="display: none">
                 <div class="row">
                     <a href="#">屏大影院</a>
                     <a href="#">屏大影院</a>
