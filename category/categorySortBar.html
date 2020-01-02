@@ -7,8 +7,46 @@
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <script src="../static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../static/css/category/categorySortBar.css">
+    <link rel="stylesheet" href="../static/css/category/categoryProduct.css">
 </head>
 <body>
+<script>
+    $(function () {
+        $("input.sortBarPrice").keyup(function () {
+            var num = $(this).val();
+            if (num.length==0) {
+                $("div.product").show();
+                return;
+            }
+            num = parseInt(num);
+            if (isNaN(num)) {
+                num = 1;
+            }
+            if (num<=0) {
+                num = 1;
+            }
+            $(this).val(num);
+
+            var begin = $("input.beginPrice").val();
+            var end = $("input.endPrice").val();
+            if (!isNaN(begin) && end != '') {
+                if (!isNaN(end)) {
+                    console.log(begin);
+                    console.log(end);
+                    $("div.product").hide();
+                    $("div.product").each(function () {
+                        var price = $(this).attr("price");
+                        price = new Number(price);
+
+                        if (price<=end && price>=begin) {
+                            $(this).show();
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
     <div class="categoryDiv">
         <img src="../static/images/category/72.jpg">
         <div class="categorySortBar">
@@ -47,16 +85,147 @@
                 <tbody>
                 <tr>
                     <td>
-                        <input placeholder="请输入">
+                        <input class="sortBarPrice beginPrice" placeholder="请输入">
                     </td>
                     <td class="grayColumn priceMiddleColumn">-</td>
                     <td>
-                        <input placeholder="请输入">
+                        <input class="sortBarPrice endPrice" placeholder="请输入">
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <div class="categoryProducts">
+        <div class="product" price="400">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥400</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="500">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥500</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="600">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥600</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="1000">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥1000</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="2000">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥2000</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="1500">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥1500</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="2500">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥2500</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" price="2000">
+            <div class="productUnit">
+                <a href="#">
+                    <img src="../static/images/productSingle_middle/3665.jpg">
+                </a>
+                <span class="productPrice">¥2000</span>
+                <a href="#" class="productLink">康佳 BCD-218EMS冰箱三门家用节能智能电脑温控玻璃电冰箱</a>
+                <a href="#" class="tmalllLink">天猫热卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">357笔</span></span>
+                    <span class="productReview">评价<span class="ProductReviewNumber">32</span></span>
+                    <span class="wangwang"><a><img src="../static/images/site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
