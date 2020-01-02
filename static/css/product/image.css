@@ -1,0 +1,25 @@
+.image {
+    width: 400px;
+    margin: 40px 20px;
+}
+
+.bigImage {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+}
+.smallImage {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.smallImage img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+}
+
+.smallImage img:hover {
+    border-color: black;
+}
