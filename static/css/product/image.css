@@ -1,6 +1,26 @@
+body {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.productPage {
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+.imageAndInfo {
+    margin: 40px 20px;
+}
+
 .image {
     width: 400px;
     margin: 40px 20px;
+    float: left;
+}
+
+.info {
+    padding: 20px 20px;
+    overflow: hidden;
 }
 
 .bigImage {
@@ -22,4 +42,199 @@
 
 .smallImage img:hover {
     border-color: black;
+}
+
+.productTitle {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+.productSubTitle {
+    color: #DD2727;
+    font-size: 12px;
+    margin: 0px 10px;
+}
+
+.juhuasuan {
+    background-color: #2DA77A;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.juhuasuanTime {
+    color: #FFC057;
+    font-weight: bold;
+}
+
+.productPriceDiv {
+    background-image: url(../../../static/images/site/priceBackground.png);
+    height: 102px;
+    color: #666666;
+    padding: 10px;
+}
+
+.originPriceDesc {
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+}
+
+.originPrice {
+    font-size: 12px;
+    color: #333333;
+    text-decoration: line-through;
+}
+
+.productSaleAndReviewNumber {
+    border-top : 1px dotted #c9c9c9;
+    border-bottom: 1px dotted #c9c9c9;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.saleNumber {
+    color: #c40000;
+    font-weight: bold;
+}
+
+.viewNumber {
+    color: #c40000;
+    font-weight: bold;
+}
+
+.productNumberSettingSpan {
+    display: inline-block;
+    width: 43px;
+    height: 32px;
+    padding: 7px 0;
+    border: 1px solid #999;
+}
+
+.productNumberSetting {
+    border: 0px;
+    height: 80%;
+    width: 80%;
+}
+
+.arrow {
+    display: inline-block;
+    width: 22px;
+    height: 32px;
+    vertical-align: top;
+}
+
+.updown {
+    border: 1px solid #999;
+    display: block;
+    width: 20px;
+    height: 14px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.updown img {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.down {
+    border: 1px solid #999;
+    display: block;
+    width: 20px;
+    height: 14px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.down img {
+    vertical-align: top;
+    display: inline-block;
+}
+.updownMiddle {
+    height: 4px;
+    display: block;
+}
+
+.productSaleAndReviewNumber div {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+}
+
+.productSaleAndReviewNumber div:first-child {
+    border-right: 1px solid #E5DFDA;
+}
+
+.productNumber {
+    color: #999999;
+}
+
+.serviceCommitment {
+    margin: 20px auto;
+}
+
+.serviceCommitmentDesc {
+    color: #999999;
+}
+
+.serviceCommitmentLink a{
+    color: #666666;
+}
+
+.serviceCommitmentLink a:hover {
+    text-decoration: none;
+}
+
+.buyDiv {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.buyDiv button {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 180px;
+    height: 40px;
+}
+
+.buyButton {
+    border: 1px solid #c40000;
+    background-color: #FFEDeD;
+    line-height: 40px;
+    font-size: 16px;
+    color: #c40000;
+}
+
+.addCartButton {
+    background-color: #c40000;
+    font-size: 16px;
+    line-height: 40px;
+    border-width: 0px;
+    color: white;
+}
+
+.promotionPriceDesc {
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+    position: relative;
+    left: 0px;
+    top: -10px;
+}
+
+.promotionPriceYuan {
+    font-size: 18px;
+    color: #C40000;
+}
+
+.promotionPrice {
+    color: #c40000;
+    font-size: 30px;
+    font-weight: bold;
 }
