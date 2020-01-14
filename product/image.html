@@ -3,23 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <script src="../static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../static/css/product/image.css">
 </head>
 <body>
+<script>
+    $(function () {
+        $("img.small").mouseenter(function () {
+            var bigImageURL = $(this).attr("bigImageURL");
+            $("img.bigImage").attr("src", bigImageURL);
+        })
+
+        $("img.bigImage").load(function () {
+            $(".small").each(function () {
+                var bigImageURl = $(this).attr("bigImageURL");
+                var image = new Image();
+                image.src = bigImageURl;
+                image.onload = function () {
+                    $("div.img4load").append($(image));
+                };
+            });
+        }
+        );
+
+        var stock = 94;
+        $(".productNumberSetting").keyup(function () {
+            var num = $(".productNumberSetting").val();
+            num = parseInt(num);
+            if (isNaN(num))
+                num = 1;
+            if (num < 1)
+                num = 1;
+            if (num > stock)
+                num = stock;
+            $(".productNumberSetting").val(num);
+        });
+
+        $(".increaseNumber").click(function () {
+            var number = $(".productNumberSetting").val();
+            number = parseInt(number);
+            number++;
+            if (number > stock)
+                number = stock;
+            $(".productNumberSetting").val(number);
+        });
+
+        $(".decreaseNumber").click(function () {
+            var number = $(".productNumberSetting").val();
+            number--;
+            if (number < 1)
+                number = 1;
+            $(".productNumberSetting").val(number);
+        })
+
+
+    });
+</script>
     <div class="productPage">
         <div class="imageAndInfo">
             <div class="image">
                 <img src="../static/images/productSingle/8619.jpg" class="bigImage">
                 <div class="smallImage">
-                    <img src="../static/images/productSingle_small/8616.jpg">
-                    <img src="../static/images/productSingle_small/8617.jpg">
-                    <img src="../static/images/productSingle_small/8618.jpg">
-                    <img src="../static/images/productSingle_small/8619.jpg">
-                    <img src="../static/images/productSingle_small/8620.jpg">
+                    <img  width="100px" class="small"  src="https://how2j.cn/tmall/img/productSingle_small/8620.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8620.jpg">
+                    <img  width="100px" class="small" src="https://how2j.cn/tmall/img/productSingle_small/8619.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8619.jpg">
+                    <img  width="100px" class="small" src="https://how2j.cn/tmall/img/productSingle_small/8618.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8618.jpg">
+                    <img  width="100px" class="small" src="https://how2j.cn/tmall/img/productSingle_small/8617.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8617.jpg">
+                    <img  width="100px" class="small" src="https://how2j.cn/tmall/img/productSingle_small/8616.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8616.jpg">
                 </div>
+                <div class="img4load hidden" ></div>
             </div>
 
             <div class="info">
@@ -62,18 +115,18 @@
                 <div class="productNumber">
                     <span>数量</span>
                     <span>
-                <span class="productNumberSettingSpan"><input class="productNumberSetting" value="1"></span>
-                <span class="arrow">
-                    <a>
-                        <span class="updown"><img src="../static/images/site/increase.png"></span>
-                    </a>
-                    <span class="updownMiddle"></span>
-                    <a>
-                        <span class="down"><img src="../static/images/site/decrease.png"></span>
-                    </a>
-                </span>
-                件
-            </span>
+                    <span class="productNumberSettingSpan"><input class="productNumberSetting" value="1"></span>
+                    <span class="arrow">
+                        <a class="increaseNumber">
+                            <span class="updown"><img src="../static/images/site/increase.png"></span>
+                        </a>
+                        <span class="updownMiddle"></span>
+                        <a class="decreaseNumber">
+                            <span class="down"><img src="../static/images/site/decrease.png"></span>
+                        </a>
+                    </span>
+                    件
+                    </span>
                     <span>库存94件</span>
                 </div>
                 <div class="serviceCommitment">
@@ -117,6 +170,7 @@
                 <img src="../static/images/productDetail/8626.jpg">
             </div>
         </div>
+        <div></div>
     </div>
 </body>
 </html>
